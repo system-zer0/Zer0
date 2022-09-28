@@ -16,8 +16,7 @@ public static partial class Result
     /// <param name="result">The result to match on.</param>
     /// <param name="ok">Function called for the Ok case.</param>
     /// <param name="error">Function called for the Error case.</param>
-    public static TOut Match<TIn, TOut>(this Result<TIn> result, Func<TIn, TOut> ok, Func<Error, TOut> error) =>
-        result.IsSuccess ? ok(result.Value) : error(result.Error);
+    public static TOut Match<TIn, TOut>(this Result<TIn> result, Func<TIn, TOut> ok, Func<Error, TOut> error) => result.IsSuccess ? ok(result.Value) : error(result.Error);
 
     /// <summary>
     /// Does the pattern matching on the <see cref="Result{T}"/> type.
@@ -29,8 +28,7 @@ public static partial class Result
     /// <param name="result">The result to match on.</param>
     /// <param name="ok">Value returned for the Ok case.</param>
     /// <param name="error">Value returned for the Error case.</param>
-    public static TOut MatchTo<TIn, TOut>(this Result<TIn> result, TOut ok, TOut error) =>
-        result.IsSuccess ? ok : error;
+    public static TOut MatchTo<TIn, TOut>(this Result<TIn> result, TOut ok, TOut error) => result.IsSuccess ? ok : error;
 
         /// <summary>
     /// Does the pattern matching on the <see cref="Result{T}"/> type.

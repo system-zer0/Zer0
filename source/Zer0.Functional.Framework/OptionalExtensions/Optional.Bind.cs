@@ -2,7 +2,7 @@
 
 namespace Zer0.Functional.Framework.OptionalExtensions;
 
-public partial class Optional
+public static partial class Optional
 {
     /// <summary>
     /// Transforms the <see cref="Optional{T}"/> into another <see cref="Optional{U}"/> using the <paramref name="binder"/> function.

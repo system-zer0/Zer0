@@ -2,7 +2,7 @@
 
 namespace Zer0.Functional.Framework.OptionalExtensions;
 
-public partial class Optional
+public static partial class Optional
 {
     /// <summary>
     /// Creates a Some instance of the <see cref="Optional{T}"/> type, encapsulating the provided value.
